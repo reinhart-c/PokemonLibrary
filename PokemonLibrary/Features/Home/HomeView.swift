@@ -38,7 +38,8 @@ struct HomeView: View {
             }
             .navigationTitle("Pokémon List")
             .navigationDestination(for: Pokemon.self) { selected in
-                DetailView(pokemon: selected)
+//                DetailView(pokemon: selected, viewModel: DetailViewModel())
+                DetailView(viewModel: DetailViewModel(pokemon: selected))
             }
         }
         .onAppear {
